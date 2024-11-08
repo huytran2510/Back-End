@@ -1,14 +1,16 @@
 package com.example.backendproject.domain.model;
 
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Entity
+@ToString
 @Table(name = "Messages")
 public class Messages {
     @Id
@@ -23,9 +25,16 @@ public class Messages {
     @JoinColumn(name = "sender_id", nullable = false)
     private User sender;
 
+    private String senderName;
+    private String receiverName;
+    private Status status;
+
     @Column(nullable = false)
-    private String messageText;
+    private String message;
 
     @Column(nullable = false)
     private LocalDateTime sentAt = LocalDateTime.now();
+    public enum Status {
+        JOIN, MESSAGE,LEAVE
+    }
 }
