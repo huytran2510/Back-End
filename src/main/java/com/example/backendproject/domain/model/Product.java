@@ -41,6 +41,9 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     private Set<Inventory> inventories;
 
+    @ManyToMany(mappedBy = "products")
+    private Set<Discount> discountSet;
+
     @ManyToOne
     private Discount discount;
 

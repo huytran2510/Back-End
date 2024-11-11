@@ -29,6 +29,10 @@ public class Authority implements GrantedAuthority {
     @JoinColumn(name = "user_id")
     private User user;
 
+    @ManyToOne
+    @JoinColumn(name = "customer_id")
+    private Customer customer;
+
     public Authority(ERole authority) {
         this.authority = authority;
     }

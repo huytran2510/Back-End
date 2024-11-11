@@ -2,7 +2,9 @@ package com.example.backendproject.domain.model;
 
 import com.example.backendproject.domain.model.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -17,67 +19,41 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Entity
-@Getter
 @Setter
-@Table(name = "users")
-public class User implements UserDetails {
-    private static final long serialVersionUID = -1605751799209099860L;
+@Getter
+@AllArgsConstructor
+@NoArgsConstructor
+public class Customer implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long customerId;
 
-    @Column(unique = true)
+    @Column(name = "username", unique = true)
     private String username;
-    @JsonIgnore
-    private String password;
-//    private List<Authority> authorities = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
 
+    @Column(name = "password")
+    private String password;
     @Column(nullable = false)
     private String firstName;
     @Column(nullable = false)
     private String lastName;
-    @Column(nullable = false)
+    @Column(unique = true)
     private String email;
     @Column(nullable = false)
     private String phone;
+    @Column(nullable = false)
+    private String address;
     private LocalDate birthday;
 
-    @Column(nullable = false, updatable = false)
-    private LocalDateTime createdAt = LocalDateTime.now();
+    @Column(name = "created_at")
+    private LocalDateTime createdAt;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Order> orderSet;
-
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "customer")
     @JsonIgnore
     private List<Authority> authorities = new ArrayList<>();
-    public User() {
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    @Override
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
@@ -86,6 +62,28 @@ public class User implements UserDetails {
                 .collect(Collectors.toList());
     }
 
+
+    @OneToMany(mappedBy = "customer")
+    private Set<Order> orderSet;
+
+    public Customer(String username, String password) {
+        this.username = username;
+
+        this.password =password;
+    }
+
+    public Customer(String username, Gender gender, String password, String firstName, String lastName, String email, String phone, String address, LocalDate birthday) {
+        this.username = username;
+        this.gender = gender;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.address = address;
+        this.birthday = birthday;
+        this.createdAt = LocalDateTime.now(); // set creation time at instantiation
+    }
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -105,4 +103,5 @@ public class User implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+//    }
 }

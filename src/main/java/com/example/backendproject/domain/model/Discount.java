@@ -19,7 +19,7 @@ public class Discount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long discountId;
 
-    @OneToMany(mappedBy = "discount")
+    @ManyToMany
     private Set<Product> products;
 
     private String discountDescription;

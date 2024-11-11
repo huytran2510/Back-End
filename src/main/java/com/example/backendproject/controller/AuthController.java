@@ -1,6 +1,7 @@
 package com.example.backendproject.controller;
 
 import com.example.backendproject.domain.dto.AuthCredentialRequest;
+import com.example.backendproject.domain.model.Customer;
 import com.example.backendproject.domain.model.User;
 import com.example.backendproject.util.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -32,15 +34,15 @@ public class AuthController {
                                     req.getUsername(), req.getPassword()
                             )
                     );
-
-            User user = (User) authenticate.getPrincipal();
-
+            UserDetails userDetails = (UserDetails) authenticate.getPrincipal();
+            String token = jwtUtil.generateToken(userDetails);
+            System.out.println(userDetails.getAuthorities().toString());
             return ResponseEntity.ok()
                     .header(
                             HttpHeaders.AUTHORIZATION,
-                            jwtUtil.generateToken(user)
+                           token
                     )
-                    .body(user);
+                    .body(userDetails);
         } catch (BadCredentialsException ex) {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
         }
