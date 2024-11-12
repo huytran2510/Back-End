@@ -44,9 +44,6 @@ public class Product {
     @ManyToMany(mappedBy = "products")
     private Set<Discount> discountSet;
 
-    @ManyToOne
-    private Discount discount;
-
     @ManyToMany(mappedBy = "product")
     private Set<ProductImages> productImages;
 
