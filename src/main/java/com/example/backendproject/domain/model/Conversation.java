@@ -22,7 +22,7 @@ public class Conversation {
 
     @ManyToOne
     @JoinColumn(name = "customer_id", nullable = false)
-    private User customer;
+    private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "employee_id", nullable = false)
