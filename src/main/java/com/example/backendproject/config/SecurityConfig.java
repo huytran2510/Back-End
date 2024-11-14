@@ -58,7 +58,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 }).and();
 
         http.authorizeHttpRequests()
-                .antMatchers("/api/auth/**", "/ws/**", "/chatroom/**", "/private-message/**","/messsage","/chatroom/public").permitAll()
+                .antMatchers("/api/auth/**", "/ws/**", "/chatroom/**", "/private-message/**","/messsage","/chatroom/public","/products/**").permitAll()
                 .anyRequest().authenticated();
 
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);

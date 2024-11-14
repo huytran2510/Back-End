@@ -1,9 +1,6 @@
 package com.example.backendproject;
 
-import com.example.backendproject.domain.model.Customer;
 import com.example.backendproject.domain.model.User;
-import com.example.backendproject.domain.model.enums.Gender;
-import com.example.backendproject.repository.CustomerRepository;
 import com.example.backendproject.repository.UserRepository;
 import com.example.backendproject.util.CustomPasswordEncoder;
 import org.springframework.beans.factory.annotation.Autowired;

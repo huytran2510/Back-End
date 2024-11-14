@@ -28,26 +28,24 @@ public class Product {
     private Integer unitsInStock;
     @Column(nullable = false)
     private Boolean discontinued;
-    @ManyToOne
+
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
 
     @Column(length = 400)
     private String description;
 
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product",fetch = FetchType.LAZY)
     private Set<OrderDetail> orderDetailSet;
 
-    @ManyToMany(mappedBy = "products")
+    @ManyToMany(mappedBy = "products",fetch = FetchType.LAZY)
     private Set<Inventory> inventories;
 
-    @ManyToMany(mappedBy = "products")
+    @ManyToMany(mappedBy = "products",fetch = FetchType.LAZY)
     private Set<Discount> discountSet;
 
-    @ManyToOne
-    private Discount discount;
-
-    @ManyToMany(mappedBy = "product")
+    @ManyToMany(mappedBy = "product",fetch = FetchType.LAZY)
     private Set<ProductImages> productImages;
 
 
