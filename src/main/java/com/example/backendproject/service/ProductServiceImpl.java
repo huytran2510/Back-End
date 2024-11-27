@@ -44,6 +44,11 @@ public class ProductServiceImpl implements IProductService {
         return toProductDetailDTO(product);
     }
 
+    @Override
+    public List<ProductDTO> listProductByCategoryId(Long id) {
+        return productRepository.findAllProductsByCategoryId(id);
+    }
+
     private ProductDetailDTO toProductDetailDTO(Product product) {
         List<String> urlImages = product.getProductImages()
                 .stream()
@@ -57,6 +62,7 @@ public class ProductServiceImpl implements IProductService {
                 product.getUnitsInStock(),
                 product.getDiscontinued(),
                 product.getCategory() != null ? product.getCategory().getId() : null,
+                product.getDescription(),
                 urlImages
         );
     }

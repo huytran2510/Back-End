@@ -19,5 +19,6 @@ public class ProductDetailDTO {
     private Integer unitsInStock;
     private Boolean discontinued;
     private Long categoryId;
+    private String description;
     private List<String> urlImage;
 }
