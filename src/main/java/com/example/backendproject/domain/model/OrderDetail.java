@@ -30,6 +30,10 @@ public class OrderDetail {
     private Double cost;
     @Column(nullable = false)
     private Double unitPrice;
+    @Column
+    private String size;
+    @Column
+    private String options;
     @Column(nullable = false)
     private Integer quantity;
     private Double discount;

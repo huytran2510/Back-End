@@ -44,4 +44,11 @@ public class ProductController {
                     .body("Product not found with ID: " + id);
         }
     }
+
+    @GetMapping("/category/{id}")
+    public ResponseEntity<List<ProductDTO>> getAllByCategoryId(@PathVariable Long id) {
+        List<ProductDTO> productList = productService.listProductByCategoryId(id);
+        System.out.println(productList);
+        return ResponseEntity.ok(productList);
+    }
 }
