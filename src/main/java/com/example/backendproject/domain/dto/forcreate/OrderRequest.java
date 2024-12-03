@@ -12,6 +12,6 @@ import java.util.List;
 @Getter
 @Setter
 public class OrderRequest {
-    private COrder cOrder;
+    private COrder order;
     private List<CartItem> cartItems;
 }

@@ -35,8 +35,7 @@ public class OrderController {
 
         try {
             // Gọi service để lưu đơn hàng
-            Order order = orderService.saveOrder(orderRequest.getCOrder(), orderRequest.getCartItems(), customer);
-
+            Order order = orderService.saveOrder(orderRequest.getOrder(), orderRequest.getCartItems(), customer);
             // Trả về đơn hàng đã lưu
             return ResponseEntity.ok(order);
         } catch (Exception e) {

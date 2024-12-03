@@ -12,10 +12,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @Entity
@@ -53,9 +50,9 @@ public class User implements UserDetails {
     @OneToMany(mappedBy = "user")
     private Set<Order> orderSet;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "user")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "user")
     @JsonIgnore
-    private List<Authority> authorities = new ArrayList<>();
+    private Set<Authority> authorities = new HashSet<>();
     public User() {
     }
 

@@ -28,7 +28,7 @@ public class BackEndProjectApplication {
 //	CommandLineRunner runner(UserRepository userRepository, CustomerRepository customerRepository) {
 //		return args -> {
 //			// Create a new user
-//			String username = "testUser";
+//			String username = "test1";
 //			Gender gender = Gender.MALE;
 //			String password = "test1";
 //			String firstName = "John";
@@ -37,7 +37,7 @@ public class BackEndProjectApplication {
 //			String phone = "123456789";
 //			String address = "123 Main St";
 //			LocalDate birthday = LocalDate.of(1990, 1, 1);
-//			User customer = new User(username, gender, passwordEncoder.getPasswordEncoder().encode("test1"), firstName, lastName, email, phone, address, birthday);
+//			User customer = new User(username, gender, passwordEncoder.getPasswordEncoder().encode(password), firstName, lastName, email, phone, address, birthday);
 //
 //			// Save the user to the database
 //			userRepository.save(customer);

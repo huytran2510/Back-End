@@ -1,9 +1,6 @@
 package com.example.backendproject.domain.dto.forcreate;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 
@@ -11,6 +8,7 @@ import java.time.LocalDate;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
+@Data
 public class COrder {
     private String orderId;
     private String shipAddress;

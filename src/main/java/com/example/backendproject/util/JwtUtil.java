@@ -23,8 +23,7 @@ public class JwtUtil implements Serializable {
     @Value("${jwt.secret}")
     private String secret;
 
-//    @Value("${jwt.token.expiration}")
-//    private long expirationTime;
+
 
     public String getUsernameFromToken(String token) {
         return getClaimFromToken(token, Claims::getSubject);

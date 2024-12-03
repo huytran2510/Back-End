@@ -28,12 +28,20 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+
         Optional<Customer> customerOptional = customerRepository.findByUsername(username);
         if (customerOptional.isPresent()) {
+            System.out.println("Found in Customer: " + username);
             return customerOptional.get();
         }
 
         Optional<User> userOptional = userRepository.findByUsername(username);
-        return userOptional.orElseThrow(() -> new UsernameNotFoundException("Invalid credentials"));
+        if (userOptional.isPresent()) {
+            System.out.println("Found in User: " + username);
+            return userOptional.get();
+        }
+
+        System.out.println("Username not found: " + username);
+        throw new UsernameNotFoundException("Invalid credentials");
     }
 }

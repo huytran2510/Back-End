@@ -60,9 +60,9 @@ public class OrderServiceImpl implements IOrderService {
 //            order.setCustomer(customer.get());
 //        }
         order.setCustomer(customer);
-        DeliveryStatus deliveryStatus = deliveryStatusRepository.findById(1L)
-                .orElseThrow(() -> new IllegalArgumentException("Invalid status ID"));
-        order.setDeliveryStatus(deliveryStatus);
+//        DeliveryStatus deliveryStatus = deliveryStatusRepository.findById(1L)
+//                .orElseThrow(() -> new IllegalArgumentException("Invalid status ID"));
+//        order.setDeliveryStatus(deliveryStatus);
 
         order.setEmail(cOrder.getEmail());
         // Save the entity to the database
