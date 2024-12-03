@@ -19,5 +19,7 @@ public class COrder {
     private String shipPhone;
     private LocalDate shippedDate;
     private String email;
-    private Long customerId;
+    private double priceDiscount;
+    private double discount;
+    private String note;
 }

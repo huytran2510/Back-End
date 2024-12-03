@@ -34,7 +34,7 @@ public class OrderDetailServiceImpl implements IOrderDetailService {
 //        orderDetail.setDiscount(product.getDiscount().getDiscountPercent());
         orderDetail.setQuantity(item.getQuantity());
         orderDetail.setCost(item.getPrice());
-        orderDetail.setUnitPrice(item.getPriceDiscount());
+//        orderDetail.setUnitPrice(item.getPriceDiscount());
         orderDetailRepository.save(orderDetail);
     }
 

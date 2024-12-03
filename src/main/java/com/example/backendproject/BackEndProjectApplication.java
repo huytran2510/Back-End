@@ -30,17 +30,17 @@ public class BackEndProjectApplication {
 //			// Create a new user
 //			String username = "testUser";
 //			Gender gender = Gender.MALE;
-//			String password = "password123";
+//			String password = "test1";
 //			String firstName = "John";
 //			String lastName = "Doe";
 //			String email = "johndoe@example.com";
 //			String phone = "123456789";
 //			String address = "123 Main St";
 //			LocalDate birthday = LocalDate.of(1990, 1, 1);
-//			Customer customer = new Customer(username, gender, passwordEncoder.getPasswordEncoder().encode("test1"), firstName, lastName, email, phone, address, birthday);
+//			User customer = new User(username, gender, passwordEncoder.getPasswordEncoder().encode("test1"), firstName, lastName, email, phone, address, birthday);
 //
 //			// Save the user to the database
-//			customerRepository.save(customer);
+//			userRepository.save(customer);
 //
 //			System.out.println("User inserted into the database: " + customer.getUsername());
 //		};

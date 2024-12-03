@@ -2,7 +2,9 @@ package com.example.backendproject.domain.model;
 
 import com.example.backendproject.domain.model.enums.Gender;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -18,6 +20,7 @@ import java.util.stream.Collectors;
 
 @Entity
 @Getter
+@AllArgsConstructor
 @Setter
 @Table(name = "users")
 public class User implements UserDetails {
@@ -30,7 +33,6 @@ public class User implements UserDetails {
     private String username;
     @JsonIgnore
     private String password;
-//    private List<Authority> authorities = new ArrayList<>();
 
     @Enumerated(EnumType.STRING)
     private Gender gender;
@@ -56,6 +58,20 @@ public class User implements UserDetails {
     private List<Authority> authorities = new ArrayList<>();
     public User() {
     }
+
+    public User(String username, Gender gender, String password, String firstName, String lastName, String email, String phone, String address, LocalDate birthday) {
+        this.username = username;
+        this.gender = gender;
+        this.password = password;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.phone = phone;
+        this.birthday = birthday;
+        this.createdAt = LocalDateTime.now(); // set creation time at instantiation
+    }
+
+
 
     public void setId(Long id) {
         this.id = id;

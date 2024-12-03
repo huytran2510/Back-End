@@ -62,7 +62,6 @@ public class Customer implements UserDetails {
                 .collect(Collectors.toList());
     }
 
-
     @OneToMany(mappedBy = "customer")
     private Set<Order> orderSet;
 

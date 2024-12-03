@@ -39,11 +39,11 @@ public class OrderServiceImpl implements IOrderService {
     private IEmailService emailService;
 
     @Override
-    public Order saveOrder(COrder cOrder, List<CartItem> itemList) {
+    public Order saveOrder(COrder cOrder, List<CartItem> itemList, Customer customer) {
         double totalPrice = 0;
-        for(CartItem item : itemList) {
-            totalPrice += (item.getPriceDiscount()*item.getQuantity());
-        }
+//        for(CartItem item : itemList) {
+//            totalPrice += (item.getPriceDiscount()*item.getQuantity());
+//        }
         Order order = new Order();
         order.setOrderId(cOrder.getOrderId());
         order.setOrderDate(LocalDate.now());
@@ -55,11 +55,11 @@ public class OrderServiceImpl implements IOrderService {
         order.setTotalPayment(totalPrice);
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
-        if (!username.equals("anonymousUser")) {
-            Optional<Customer> customer = customerRepository.findByUsername(username);
-            order.setCustomer(customer.get());
-        }
-
+//        if (!username.equals("anonymousUser")) {
+//            Optional<Customer> customer = customerRepository.findByUsername(username);
+//            order.setCustomer(customer.get());
+//        }
+        order.setCustomer(customer);
         DeliveryStatus deliveryStatus = deliveryStatusRepository.findById(1L)
                 .orElseThrow(() -> new IllegalArgumentException("Invalid status ID"));
         order.setDeliveryStatus(deliveryStatus);
