@@ -1,0 +1,381 @@
+INSERT INTO `product`(`description`, `discontinued`, `product_name`, `unit_price`, `units_in_stock`) VALUES 
+('Cho ngày thêm tươi, tỉnh, êm, mượt với Trà Xanh Espresso Marble. Đây là sự mai mối bất ngờ giữa trà xanh Tây Bắc vị mộc và cà phê Arabica Đà Lạt. Muốn ngày thêm chút highlight, nhớ tìm đến sự bất ngờ này bạn nhé!', 1, 'Trà Xanh Espresso Marble', 49000, 100),
+('Ngày thêm rộn ràng với Bạc Xỉu Lắc Sữa Yến Mạch. Cà phê phin Robusta đượm hương “lắc tới bến” cùng sữa yến mạch sánh mịn và đá đập mát lạnh. Lắc trước rồi hớp, hớp trực tiếp từ nắp lại càng ngon. *Để giữ trọn vị, Bạc Xỉu Lắc luôn được phục vụ kèm đá với định lượng đá không đổi.', 0, 'Bạc Xỉu Lắc Sữa Yến Mạch', 45000, 200),
+('Ngày thêm ngọt ngào với Bạc Xỉu Lắc Caramel Muối Hồng. Cà phê phin Robusta đượm hương “lắc tới bến” cùng sữa yến mạch sánh mịn, Caramel Muối thơm ngon và đá đập mát lạnh. Lắc trước rồi hớp, hớp trực tiếp từ nắp lại càng ngon. *Để giữ trọn vị, Bạc Xỉu Lắc luôn được phục vụ với định lượng đá và độ ngọt không đổi.', 0, 'Bạc Xỉu Lắc Caramel Muối', 45000, 200),
+('Ngày thêm dịu êm với Bạc Xỉu Lắc Hạnh Nhân Nướng. Cà phê phin Robusta đượm hương “lắc tới bến” cùng sữa yến mạch sánh mịn, Hạnh Nhân Nướng thơm bùi và đá đập mát lạnh. Lắc trước rồi hớp, hớp trực tiếp từ nắp lại càng ngon. *Để giữ trọn vị, Bạc Xỉu Lắc luôn được phục vụ với định lượng đá và độ ngọt không đổi.', 0, 'Bạc Xỉu Lắc Hạnh Nhân Nướng', 45000, 200),
+('Bơ sáp Đắk Lắk dẻo quẹo hòa quyện cùng Cà phê Arabica Cầu Đất êm mượt. Khuấy đều để thưởng thức hương vị tươi tỉnh, đầy mới lạ!', 0, 'Bơ Arabica', 49000, 200),
+('Nếu chuộng vị cà phê đậm đà, bùng nổ và thích vị đường đen ngọt thơm, Đường Đen Sữa Đá đích thị là thức uống dành cho bạn. Không chỉ giúp bạn tỉnh táo buổi sáng, Đường Đen Sữa Đá còn hấp dẫn đến ngụm cuối cùng bởi thạch cà phê giòn dai, nhai cực cuốn. - Khuấy đều trước khi sử dụng', 0, 'Đường Đen Sữa Đá', 35000, 200),
+('Thức uống giúp tỉnh táo tức thì để bắt đầu ngày mới thật hứng khởi. Không đắng khét như cà phê truyền thống, The Coffee House Sữa Đá mang hương vị hài hoà đầy lôi cuốn. Là sự đậm đà của 100% cà phê Arabica Cầu Đất rang vừa tới, biến tấu tinh tế với sữa đặc và kem sữa ngọt ngào cực quyến rũ. Càng hấp dẫn hơn với topping thạch 100% cà phê nguyên chất giúp giữ trọn vị ngon đến ngụm cuối cùng.', 0, 'The Coffee House Sữa Đá', 39000, 200),
+('Cà phê Đắk Lắk nguyên chất được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà, hài hòa giữa vị ngọt đầu lưỡi và vị đắng thanh thoát nơi hậu vị', 0, 'Cà Phê Sữa Đá', 29000, 200),
+('Cà phê được pha phin truyền thống kết hợp với sữa đặc tạo nên hương vị đậm đà, hài hòa giữa vị ngọt đầu lưỡi và vị đắng thanh thoát nơi hậu vị.', 0, 'Cà Phê Sữa Nóng', 39000, 200),
+('OBạc sỉu chính là "Ly sữa trắng kèm một chút cà phê". Thức uống này rất phù hợp những ai vừa muốn trải nghiệm chút vị đắng của cà phê vừa muốn thưởng thức vị ngọt béo ngậy từ sữa.', 0, 'Bạc Sỉu', 29000, 200),
+('Bạc sỉu chính là "Ly sữa trắng kèm một chút cà phê". Thức uống này rất phù hợp những ai vừa muốn trải nghiệm chút vị đắng của cà phê vừa muốn thưởng thức vị ngọt béo ngậy từ sữa', 0, 'Bạc Sỉu Nóng', 39000, 200),
+('Không ngọt ngào như Bạc sỉu hay Cà phê sữa, Cà phê đen mang trong mình phong vị trầm lắng, thi vị hơn. Người ta thường phải ngồi rất lâu mới cảm nhận được hết hương thơm ngào ngạt, phảng phất mùi cacao và cái đắng mượt mà trôi tuột xuống vòm họng', 0, 'Cà Phê Đen Đá', 29000, 200),
+('Không ngọt ngào như Bạc sỉu hay Cà phê sữa, Cà phê đen mang trong mình phong vị trầm lắng, thi vị hơn. Người ta thường phải ngồi rất lâu mới cảm nhận được hết hương thơm ngào ngạt, phảng phất mùi cacao và cái đắng mượt mà trôi tuột xuống vòm họng.', 0, 'Cà Phê Đen Nóng', 39000, 200),
+('Đường Đen Marble Latte êm dịu cực hấp dẫn bởi vị cà phê đắng nhẹ hoà quyện cùng vị đường đen ngọt thơm và sữa tươi béo mịn. Sự kết hợp đầy mới mẻ của cà phê và đường đen cũng tạo nên diện mạo phân tầng đẹp mắt. Đây là lựa chọn đáng thử để bạn khởi đầu ngày mới đầy hứng khởi. - Khuấy đều trước khi sử dụng.', 0, 'Đường Đen Marble Latte', 55000, 200),
+('Khuấy đều trước khi sử dụng Caramel Macchiato sẽ mang đến một sự ngạc nhiên thú vị khi vị thơm béo của bọt sữa, sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng và vị ngọt đậm của sốt caramel được gói gọn trong một tách cà phê.', 0, 'Caramel Macchiato Đá', 55000, 200),
+('Caramel Macchiato sẽ mang đến một sự ngạc nhiên thú vị khi vị thơm béo của bọt sữa, sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng và vị ngọt đậm của sốt caramel được gói gọn trong một tách cà phê.', 0, 'Caramel Macchiato Nóng', 55000, 200),
+('Caramel Macchiato sẽ mang đến một sự ngạc nhiên thú vị khi vị thơm béo của bọt sữa, sữa tươi, vị đắng thanh thoát của cà phê Espresso hảo hạng và vị ngọt đậm của sốt caramel được gói gọn trong một tách cà phê.', 0, 'Latte Đá', 55000, 200),
+('Một sự kết hợp tinh tế giữa vị đắng cà phê Espresso nguyên chất hòa quyện cùng vị sữa nóng ngọt ngào, bên trên là một lớp kem mỏng nhẹ tạo nên một tách cà phê hoàn hảo về hương vị lẫn nhãn quan.', 0, 'Latte Nóng', 55000, 200),
+('Americano được pha chế bằng cách pha thêm nước với tỷ lệ nhất định vào tách cà phê Espresso, từ đó mang lại hương vị nhẹ nhàng và giữ trọn được mùi hương cà phê đặc trưng.', 0, 'Americano Đá', 45000, 200),
+('Americano được pha chế bằng cách pha thêm nước với tỷ lệ nhất định vào tách cà phê Espresso, từ đó mang lại hương vị nhẹ nhàng và giữ trọn được mùi hương cà phê đặc trưng.', 0, 'Americano Nóng', 45000, 200),
+('Capuchino là thức uống hòa quyện giữa hương thơm của sữa, vị béo của bọt kem cùng vị đậm đà từ cà phê Espresso. Tất cả tạo nên một hương vị đặc biệt, một chút nhẹ nhàng, trầm lắng và tinh tế.', 0, 'Cappuccino Đá', 55000, 200),
+('Capuchino là thức uống hòa quyện giữa hương thơm của sữa, vị béo của bọt kem cùng vị đậm đà từ cà phê Espresso. Tất cả tạo nên một hương vị đặc biệt, một chút nhẹ nhàng, trầm lắng và tinh tế.', 0, 'Cappuccino Nóng', 55000, 200),
+('Một tách Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc.', 0, 'Espresso Đá', 49000, 200),
+('Một tách Espresso nguyên bản được bắt đầu bởi những hạt Arabica chất lượng, phối trộn với tỉ lệ cân đối hạt Robusta, cho ra vị ngọt caramel, vị chua dịu và sánh đặc.', 0, 'Espresso Nóng', 45000, 200),
+('Vị chua ngọt của Kim Quất làm dậy lên hương vị trái cây tự nhiên vốn sẵn có trong hạt cà phê Arabica Cầu Đất, mang đến một ly Cold Brew vừa nhẹ nhàng và thanh mát, đã khát ngày hè.', 0, 'Cold Brew Kim Quất', 49000, 200),
+('Thanh mát và cân bằng với hương vị cà phê nguyên bản 100% Arabica Cầu Đất cùng sữa tươi thơm béo cho từng ngụm tròn vị, hấp dẫn.', 0, 'Cold Brew Sữa Tươi', 49000, 200),
+('Tại The Coffee House, Cold Brew được ủ và phục vụ mỗi ngày từ 100% hạt Arabica Cầu Đất với hương gỗ thông, hạt dẻ, nốt sô-cô-la đặc trưng, thoang thoảng hương khói nhẹ giúp Cold Brew giữ nguyên vị tươi mới.', 0, 'Cold Brew Truyền Thống', 45000, 200),
+('Bơ sáp Đắk Lắk dẻo quẹo hòa quyện lớp foam phô mai tươi mềm mịn. Thêm chút Trà Sữa Oolong Tứ Quý đượm hương càng dậy vị trái cây tươi mát. Khuấy đều để thưởng trọn vị sảng khoái. Lưu ý: Sản phẩm không kèm phao.', 0, 'Bơ Sữa Phô Mai Tươi', 55000, 200),
+('Dâu tây Đà Lạt chín mọng hòa quyện lớp foam phô mai tươi mềm mịn. Thêm chút Trà Oolong Tứ Quý đượm hương và thạch kim quất mềm tan càng dậy vị trái cây tươi mát. Khuấy đều để thưởng trọn vị sảng khoái. Lưu ý: Sản phẩm không kèm phao.', 0, 'Dâu Phô Mai Tươi', 55000, 200),
+('Mận hậu đặc sản Mộc Châu đỏ thơm căng mọng, hòa quyện lớp foam phô mai tươi mềm mịn. Thêm chút Trà Oolong Tứ Quý đượm hương và thạch kim quất mềm tan càng dậy vị trái cây tươi mát. Khuấy đều để thưởng trọn vị sảng khoái. Lưu ý: Sản phẩm không kèm phao.', 0, 'Mận Phô Mai Tươi', 55000, 200),
+('Mãng cầu Nam Bộ chín tự nhiên đậm vị, hòa quyện lớp foam phô mai tươi mềm mịn. Thêm chút Trà Xanh Tây Bắc êm dịu và thạch kim quất mềm tan càng dậy vị trái cây tươi mát. Khuấy đều để thưởng trọn vị sảng khoái. Lưu ý: Sản phẩm không kèm phao.', 0, 'Mãng Cầu Phô Mai Tươi', 55000, 200),
+('Nho xanh vào vụ mọng nước ngọt thơm, hòa quyện lớp foam phô mai tươi mềm mịn. Thêm chút Trà Xanh Tây Bắc êm dịu và thạch kim quất mềm tan càng dậy vị trái cây tươi mát. Khuấy đều để thưởng trọn vị sảng khoái. Lưu ý: Sản phẩm không kèm phao.', 0, 'Nho Phô Mai Tươi', 55000, 200),
+('Đậm hương trà, sảng khoái du xuân cùng Oolong Tứ Quý Kim Quất Trân Châu. Vị nước cốt kim quất tươi chua ngọt, thêm trân châu giòn dai.', 0, 'Oolong Tứ Quý Kim Quất Trân Châu', 49000, 200),
+('Đậm hương trà, thanh mát sắc xuân với Oolong Tứ Quý Vải. Cảm nhận hương hoa đầu mùa, hòa quyện cùng vị vải chín mọng căng tràn sức sống.', 0, 'Oolong Tứ Quý Vải', 49000, 200),
+('Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.', 0, 'Trà Đào Cam Sả - Đá', 49000, 200),
+('Nền trà oolong hảo hạng kết hợp cùng hạt sen tươi, bùi bùi và lớp foam cheese béo ngậy. Trà hạt sen là thức uống thanh mát, nhẹ nhàng phù hợp cho cả buổi sáng và chiều tối.', 0, 'Oolong Tứ Quý Sen', 49000, 200),
+('Nền trà oolong hảo hạng kết hợp cùng hạt sen tươi, bùi bùi thơm ngon. Trà hạt sen là thức uống thanh mát, nhẹ nhàng phù hợp cho cả buổi sáng và chiều tối.', 0, 'Oolong Tứ Quý Sen (Nóng)', 59000, 200),
+('Vị thanh ngọt của đào, vị chua dịu của Cam Vàng nguyên vỏ, vị chát của trà đen tươi được ủ mới mỗi 4 tiếng, cùng hương thơm nồng đặc trưng của sả chính là điểm sáng làm nên sức hấp dẫn của thức uống này.', 0, 'Trà Đào Cam Sả - Nóng', 59000, 200),
+('Trà hoa Hibiscus 0% caffeine chua nhẹ, kết hợp cùng trà lên men Kombucha hoàn toàn tự nhiên và Đào thanh mát tạo nên Hi-Tea Đào Kombucha chua ngọt cực cuốn. Đặc biệt Kombucha Detox giàu axit hữu cơ, Đào nhiều chất xơ giúp thanh lọc cơ thể và hỗ trợ giảm cân hiệu quả. Lưu ý: Khuấy đều trước khi dùng.', 0, 'Hi-Tea Đào Kombucha', 59000, 200),
+('Trà hoa Hibiscus 0% caffeine thanh mát, hòa quyện cùng trà lên men Kombucha 100% tự nhiên và mứt Yuzu Marmalade (quýt Nhật) mang đến hương vị chua chua lạ miệng. Đặc biệt, Hi-Tea Yuzu Kombucha cực hợp cho team thích detox, muốn sáng da nhờ Kombucha Detox nhiều chất chống oxy hoá cùng Yuzu giàu vitamin C. Lưu ý: Khuấy đều trước khi dùng.', 0, 'Hi-Tea Yuzu Kombucha', 59000, 200),
+('Không chỉ nổi bật với sắc đỏ đặc trưng từ trà hoa Hibiscus, Hi-Tea Yuzu còn gây ấn tượng với topping Yuzu (quýt Nhật) lạ miệng, kết hợp cùng trân châu trắng dai giòn sần sật, nhai vui vui.', 0, 'Hi-Tea Yuzu Trân Châu', 49000, 200),
+('Chút ngọt ngào của Vải, mix cùng vị chua thanh tao từ trà hoa Hibiscus, mang đến cho bạn thức uống đúng chuẩn vừa ngon, vừa healthy.', 0, 'Hi-Tea Vải', 49000, 200),
+('Sự kết hợp ăn ý giữa Đào cùng trà hoa Hibiscus, tạo nên tổng thể hài hoà dễ gây “thương nhớ” cho team thích món thanh mát, có vị chua nhẹ.', 0, 'Hi-Tea Đào', 49000, 200),
+('Trà Oolong Tứ Quý ngạt ngào hoa cỏ mùa xuân, hòa quyện cùng sữa thơm mịn màng, sương sáo thanh mát. Đó là Lộc Yêu Yêu ngọt ngào mà Nhà gửi gắm đến bạn.', 0, 'Trà Sữa Oolong Tứ Quý Sương Sáo', 55000, 200),
+('Tận hưởng hương vị núi rừng mát lành lắng đọng trong từng ngụm Trà Sữa Oolong B’Lao của Nhà. Từng lá trà được Nhà chắt chiu từ B’Lao (Lâm Đồng), sao (rang) kỹ càng để giữ trọn vị Oolong đậm đà, quyện cùng sữa thơm béo, hấp dẫn.', 0, 'Trà Sữa Oolong BLao', 39000, 200),
+('Bơ sáp Đắk Lắk dẻo quẹo hòa quyện cùng Trà Sữa Oolong Tứ Quý đượm hương. Khó cưỡng với hương vị ngọt ngào, đậm bơ, sánh mịn. Khuấy đều để thưởng trọn vị bạn nhé.', 0, 'Trà Sữa Oolong Tứ Quý Bơ', 59000, 200),
+('Tận hưởng hương vị Oolong nướng đậm đà được Nhà rang kỹ càng, quyện cùng sữa thơm béo, càng thêm hấp dẫn với sương sáo thanh mát.', 0, 'Trà Sữa Oolong Nướng Sương Sáo', 55000, 200),
+('Trà đen được ủ mới mỗi ngày, giữ nguyên được vị chát mạnh mẽ đặc trưng của lá trà, phủ bên trên là lớp Macchiato "homemade" bồng bềnh quyến rũ vị phô mai mặn mặn mà béo béo.', 0, 'Trà Đen Macchiato', 55000, 200),
+('Thêm chút ngọt ngào cho ngày mới với hồng trà nguyên lá, sữa thơm ngậy được cân chỉnh với tỉ lệ hoàn hảo, cùng trân châu trắng dai giòn có sẵn để bạn tận hưởng từng ngụm trà sữa ngọt ngào thơm ngậy thiệt đã.', 0, 'Hồng Trà Sữa Trân Châu', 55000, 200),
+('Từng ngụm trà chuẩn gu ấm áp, đậm đà beo béo bởi lớp sữa tươi chân ái hoà quyện. Trà đen nguyên lá âm ấm dịu nhẹ, quyện cùng lớp sữa thơm béo khó lẫn - hương vị ấm áp chuẩn gu trà, cho từng ngụm nhẹ nhàng, ngọt dịu lưu luyến mãi nơi cuống họng.', 0, 'Hồng Trà Sữa Nóng', 55000, 200),
+('Hương vị chân ái đúng gu đậm đà với trà oolong được “sao” (nướng) lâu hơn cho hương vị đậm đà, hòa quyện với sữa thơm béo mang đến cảm giác mát lạnh, lưu luyến vị trà sữa đậm đà nơi vòm họng.', 0, 'Trà sữa Oolong Nướng Trân Châu', 55000, 200),
+('Đậm đà chuẩn gu và ấm nóng - bởi lớp trà oolong nướng đậm vị hoà cùng lớp sữa thơm béo. Hương vị chân ái đúng gu đậm đà - trà oolong được "sao" (nướng) lâu hơn cho vị đậm đà, hoà quyện với sữa thơm ngậy. Cho từng ngụm ấm áp, lưu luyến vị trà sữa đậm đà mãi nơi cuống họng.', 0, 'Trà sữa Oolong Nướng (Nóng)', 55000, 200),
+('Cho ngày thêm tươi, tỉnh, êm, mượt với Trà Xanh Espresso Marble. Đây là sự mai mối bất ngờ giữa trà xanh Tây Bắc vị mộc và cà phê Arabica Đà Lạt. Muốn ngày thêm chút highlight, nhớ tìm đến sự bất ngờ này bạn nhé!.', 0, 'Trà Xanh Espresso Marble', 49000, 200),
+('Vị matcha êm mượt nhờ kết hợp với sữa yến mạch. *Khuấy đều để thưởng trọn hương vị.', 0, 'Trà Xanh Latte Sữa Yến Mạch', 55000, 200),
+('Lựa chọn phù hợp cho ai thích matcha đậm nhưng ngại đắng. *Khuấy đều để thưởng trọn hương vị.', 0, 'Trà Xanh Latte Đậm Vị', 49000, 200),
+('Best seller 2023 - rất phù hợp cho ai muốn nhập môn matcha. *Khuấy đều để thưởng trọn hương vị.', 0, 'Trà Xanh Latte', 45000, 200),
+('Vị matcha êm mượt nhờ kết hợp với sữa yến mạch (ui da nóng quá). *Khuấy đều để thưởng trọn hương vị.', 0, 'Trà Xanh Latte Sữa Yến Mạch (Nóng)', 55000, 200),
+('Trà Xanh Latte (Nóng) là phiên bản rõ vị trà nhất. Nhấp một ngụm, bạn chạm ngay vị trà xanh Tây Bắc chát nhẹ hoà cùng sữa nguyên kem thơm béo, đọng lại hậu vị ngọt ngào, êm dịu. Không chỉ là thức uống tốt cho sức khoẻ, Trà Xanh Latte (Nóng) còn là cái ôm ấm áp của đồng bào Tây Bắc gửi cho người miền xuôi.', 0, 'Trà Xanh Latte (Nóng)', 49000, 200),
+('Trà Xanh Đường Đen với hiệu ứng phân tầng đẹp mắt, như phác hoạ núi đồi Tây Bắc bảng lảng trong sương mây, thấp thoáng những nương chè xanh ngát. Từng ngụm là sự hài hoà từ trà xanh đậm đà, đường đen ngọt ngào, sữa tươi thơm béo. Khuấy đều trước khi dùng, để thưởng thức đúng vị.', 0, 'Trà Xanh Đường Đen', 55000, 200),
+('Đá Xay Frosty Trà Xanh như lời mời mộc mạc, ghé thăm Tây Bắc vào những ngày tiết trời se lạnh, núi đèo mây phủ. Vị chát dịu, ngọt thanh của trà xanh Tây Bắc kết hợp đá xay sánh mịn, whipping cream bồng bềnh và bột trà xanh trên cùng thêm đậm vị. Đây không chỉ là thức uống mát lạnh bật mood, mà còn tốt cho sức khoẻ nhờ giàu vitamin và các chất chống oxy hoá.', 0, 'Frosty Trà Xanh', 59000, 200),
+('Bột chocolate nguyên chất hoà cùng sữa tươi béo ngậy. Vị ngọt tự nhiên, không gắt cổ, để lại một chút đắng nhẹ, cay cay trên đầu lưỡi.', 0, 'Chocolate Nóng', 55000, 200),
+('Bột chocolate nguyên chất hoà cùng sữa tươi béo ngậy, ấm nóng. Vị ngọt tự nhiên, không gắt cổ, để lại một chút đắng nhẹ, cay cay trên đầu lưỡi.', 0, 'Chocolate Đá', 55000, 200),
+('Đá Xay Frosty Phin-Gato là lựa chọn không thể bỏ lỡ cho tín đồ cà phê. Cà phê nguyên chất pha phin truyền thống, thơm đậm đà, đắng mượt mà, quyện cùng kem sữa béo ngậy và đá xay mát lạnh. Nhân đôi vị cà phê nhờ có thêm thạch cà phê đậm đà, giòn dai. Thức uống khơi ngay sự tỉnh táo tức thì. Lưu ý: Khuấy đều phần đá xay trước khi dùng.', 0, 'Frosty Phin-Gato', 55000, 200),
+('Đá Xay Frosty Cà Phê Đường Đen mát lạnh, sảng khoái ngay từ ngụm đầu tiên nhờ sự kết hợp vượt chuẩn vị quen giữa Espresso đậm đà và Đường Đen ngọt thơm. Đặc biệt, whipping cream beo béo cùng thạch cà phê giòn dai, đậm vị nhân đôi sự hấp dẫn, khơi bừng sự hứng khởi trong tích tắc.', 0, 'Frosty Cà Phê Đường Đe', 59000, 200),
+('Caramel ngọt thơm quyện cùng cà phê Arabica Cầu Đất đượm hương gỗ thông, hạt dẻ và nốt sô cô la đặc trưng tạo nên Đá Xay Frosty Caramel Arabica độc đáo chỉ có tại Nhà. Cực cuốn với lớp whipping cream béo mịn, thêm thạch cà phê giòn ngon bắt miệng.', 0, 'Frosty Caramel Arabica', 59000, 200),
+('Bồng bềnh như một đám mây, Đá Xay Frosty Bánh Kem Dâu vừa ngon mắt vừa chiều vị giác bằng sự ngọt ngào. Bắt đầu bằng cái chạm môi với lớp kem whipping cream, cảm nhận ngay vị beo béo lẫn sốt dâu thơm lừng. Sau đó, hút một ngụm là cuốn khó cưỡng bởi đá xay mát lạnh quyện cùng sốt dâu ngọt dịu. Lưu ý: Khuấy đều phần đá xay trước khi dùng.', 0, 'Frosty Bánh Kem Dâu', 59000, 200),
+('Đá Xay Frosty Choco Chip, thử là đã! Lớp whipping cream bồng bềnh, beo béo lại có thêm bột sô cô la và sô cô la chip trên cùng. Gấp đôi vị ngon với sô cô la thật xay với đá sánh mịn, đậm đà đến tận ngụm cuối cùng.', 0, 'Frosty Choco Chip', 59000, 200),
+('Vỏ bánh mì giòn tan, kết hợp với lớp nhân pate béo béo đậm đà sẽ là lựa chọn lý tưởng nhẹ nhàng để lấp đầy chiếc bụng đói , cho 1 bữa sáng - trưa - chiều - tối của bạn thêm phần thú vị.', 0, 'Bánh Mì Que Pate', 15000, 200),
+('Vỏ bánh mì giòn tan, kết hợp với lớp nhân pate béo béo đậm đà và 1 chút cay cay sẽ là lựa chọn lý tưởng nhẹ nhàng để lấp đầy chiếc bụng đói , cho 1 bữa sáng - trưa - chiều - tối của bạn thêm phần thú vị.', 0, 'Bánh Mì Que Pate Cay', 15000, 200),
+('Croissant trứng muối thơm lừng, bên ngoài vỏ bánh giòn hấp dẫn bên trong trứng muối vị ngon khó cưỡng.', 0, 'Croissant trứng muối', 39000, 200),
+('Bánh Butter Croissant bạn đã yêu, nay yêu không lối thoát khi được chấm cùng sữa đặc. Thơm bơ mịn sữa, ngọt ngào lòng nhau.', 0, 'Butter Croissant Sữa Đặc', 35000, 200),
+('Chiếc bánh với lớp phô mai vàng sánh mịn bên trong, được bọc ngoài lớp vỏ xốp mềm thơm lừng. Thêm lớp chà bông mằn mặn hấp dẫn bên trên.', 0, 'Chà Bông Phô Mai', 39000, 200),
+('Bao bọc bởi lớp vỏ Mochi dẻo thơm, bên trong là lớp kem lạnh cùng nhân phúc bồn tử ngọt ngào. Gọi 1 chiếc Mochi cho ngày thật tươi mát. Sản phẩm phải bảo quán mát và dùng ngon nhất trong 2h sau khi nhận hàng.', 0, 'Mochi Kem Phúc Bồn Tử', 19000, 200),
+('Bao bọc bởi lớp vỏ Mochi dẻo thơm, bên trong là lớp kem lạnh cùng nhân việt quất đặc trưng thơm thơm, ngọt dịu. Gọi 1 chiếc Mochi cho ngày thật tươi mát. Sản phẩm phải bảo quán mát và dùng ngon nhất trong 2h sau khi nhận hàng.', 0, 'Mochi Kem Việt Quất', 19000, 200),
+('Bao bọc bởi lớp vỏ Mochi dẻo thơm, bên trong là lớp kem lạnh cùng nhân chocolate độc đáo. Gọi 1 chiếc Mochi cho ngày thật tươi mát. Sản phẩm phải bảo quán mát và dùng ngon nhất trong 2h sau khi nhận hàng.', 0, 'Mochi Kem Chocolate', 19000, 200),
+('Bao bọc bởi lớp vỏ Mochi dẻo thơm, bên trong là lớp kem lạnh cùng nhân trà xanh đậm vị. Gọi 1 chiếc Mochi cho ngày thật tươi mát. Sản phẩm phải bảo quán mát và dùng ngon nhất trong 2h sau khi nhận hàng.', 0, 'Mochi Kem Matcha', 19000, 200),
+('Hương vị dễ ghiền được tạo nên bởi chút đắng nhẹ của cà phê, lớp kem trứng béo ngọt dịu hấp dẫn.', 0, 'Mousse Tiramisu', 35000, 200),
+('Với vẻ ngoài đáng yêu và hương vị ngọt ngào, thơm béo nhất định bạn phải thử ít nhất 1 lần.', 0, 'Mousse Gấu Chocolate', 39000, 200),
+('Cắn một miếng, vỏ bánh ngàn lớp giòn thơm bơ béo, rồi mịn tan trong miệng. Cực dính khi nhâm nhi Butter Croissant với cà phê hoặc chấm cùng các món nước có foam trứng của Nhà.', 0, 'Butter Croissant', 29000, 200),
+('Lạ mắt, bắt vị với chiếc bánh Croffle được làm từ cốt bánh Croissant nướng trong khuôn Waffle tổ ong. Trong mềm mịn, ngoài giòn thơm, thêm topping sô cô la tan chảy, ăn là yêu.', 0, 'Choco Croffle', 39000, 200),
+('Ngon nức lòng cùng nhân patê và thịt heo cuộn mình trong vỏ bánh ngàn lớp thơm bơ, giòn rụm.', 0, 'Pate Chaud', 39000, 200),
+('Cà Phê Đen Đá Túi (30 gói x 16g).', 0, 'Pate Chaud', 116000, 200),
+('Cà Phê Đen Đá Hộp (14 gói x 16g).', 0, 'Pate Chaud', 66000, 200),
+('Cà Phê Sữa Đá Hòa Tan Túi 25x22G.', 0, 'Pate Chaud', 127000, 200),
+('Cà Phê Sữa Đá Hòa Tan (10 gói x 22g).', 0, 'Pate Chaud', 53000, 200),
+('Cà Phê Rang Xay Original 1 250G.', 0, 'Pate Chaud', 82000, 200),
+('Cà Phê Hoà Tan Đậm Vị Việt (18 gói x 16 gam).', 0, 'Pate Chaud', 55000, 200);
+
+
+INSERT INTO `product_images`( `image_url`) VALUES 
+('https://product.hstatic.net/1000075078/product/1703471714_bg-vang-tra-xanh-espresso-marble_8b66b306026b44aaa6fd53f48bdf50c2.jpg'),
+('https://product.hstatic.net/1000075078/product/1729690140_bxl-yenmach_c6e8ccedcb87470998e570722d7e8f05.jpg'),
+('https://product.hstatic.net/1000075078/product/1729690154_bxl-caramel_06cb698fe55f4df1ae05d0580f4caa14_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1729690191_bxl-hanhnhan_b00ecc78a8d742f7a19da0cc1a56a09b_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1723623452_bo-arabica_4c8eaae810de4602b29087d7faf0b1b0_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1686716532_dd-suada_c180c6187e644babbac7019a2070231e_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1669736835_ca-phe-sua-da_e6168b6a38ec45d2b4854d2708b5d542_large.png'),
+('https://product.hstatic.net/1000075078/product/1645963560_ca-phe-sua-da-min_b4921bbe3ce341c7a29c854fcd706713.png'),
+('https://product.hstatic.net/1000075078/product/1639377770_cfsua-nong_9a47f58888e7444a9979e0d117d49ad3_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1639377904_bac-siu_525b9fa5055b41f183088c8e479a9472_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1639377926_bacsiunong_51fd4560c6b74a249176abc43f8f0ad6_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1639377797_ca-phe-den-da_6f4766ec0f8b4e929a8d916ae3c13254_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1639377816_ca-phe-den-nong_2e0cb9233846467fbdcb76e99d2b7cac_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1686716537_dd-latte_785591205184481597a2a79b9331e03b_large.jpg'),
+('https://product.hstatic.net/1000075078/product/caramel-macchiato_143623_0e070a39d0e54e808db4d91049430b51_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1645971206_53476442-2294790520794961-6801279449942720512-n_b1176e22e0854cb98756db41bfbee1da.jpg'),
+('https://product.hstatic.net/1000075078/product/1645971207_img-4933_581a3bec1d9846afaf9baca248613297.jpg'),
+('https://product.hstatic.net/1000075078/product/caramelmacchiatonong_168039_9a4c155f15294771b9c300b0230c6a88_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1645969436_caramel-macchiato-nong-lifestyle-1_902039a227784df28b92879d9f0545b5.jpg'),
+('https://product.hstatic.net/1000075078/product/latte-da_438410_ff2be8d76067434385f8e27b33fed780_large.jpg'),
+('https://product.hstatic.net/1000075078/product/latte_851143_377d5e11c1e145a8bf5f82a64047e60d_large.jpg'),
+('https://product.hstatic.net/1000075078/product/classic-cold-brew_791256_d4d8388a3d724f879845680c0239ff68_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1636647328_arme-nong_3c118e3822444aadb7f0e1a162d5264a_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1645968775_americano-copy_bb5a408f247646f0935eb17932a6d0d0.png'),
+('https://product.hstatic.net/1000075078/product/1645968776_americano-nong-lifestyle_76ac71d068d84ba7a6dfd7732a45c560.jpg'),
+('https://product.hstatic.net/1000075078/product/capu-da_487470_e06d3835cbc84e51bd635b04d541494e_large.jpg'),
+('https://product.hstatic.net/1000075078/product/cappuccino_621532_f42ec557eda145b5958374ca67e65ff2_large.jpg'),
+('https://product.hstatic.net/1000075078/product/cfdenda-espressoda_185438_1515261ef60b482eb58e1c545e7410a3_large.jpg'),
+('https://product.hstatic.net/1000075078/product/espressonong_612688_41d0812d5efb47aaaebaea91a3b206db_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1716811739_cold-brew-kim-quat-2_accd458085414678b3f86996899fe92f_large.jpg'),
+('https://product.hstatic.net/1000075078/product/cold-brew-sua-tuoi_379576_990956a1473e4ded82c8f76b877b7d15_large.jpg'),
+('https://product.hstatic.net/1000075078/product/classic-cold-brew_239501_31d6bfe69bc04714a437cff0fe0317ab_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1719929441_bo-sua-pmt_77e27a929b5340e5bc7b83bb1963f0eb_large.jpg'), 
+('https://product.hstatic.net/1000075078/product/1717387639_dau-pho-mai_de092bfb88614bf1bfe9bd9defc6522f_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1717387385_man-pho-mai_76b43ef7a40b497f94c1ee695b400754_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1717387907_man-cau-pho-mai_211483feb4e64f6a86bc23552155a3ce_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1717387602_nho-pho-mai_343a2e5a5bae4da59a7ba19953220f74_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1719200101_kimquat_54e42a7ed1de41cbaa9c967892e1587e_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1719200008_vai_4c62d00048e146a8ad8b8f0c321cf9f7_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1669736819_tra-dao-cam-sa-da_63defc32ce214da487850604a63ff281_large.png')
+('https://product.hstatic.net/1000075078/product/tra-sen_905594_88ead4453b3f4fdf963923d353941c87_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1645970154_img-2964_5ced6d93171c421dbbcd68cc8a17a6d7.jpg'),
+('https://product.hstatic.net/1000075078/product/45970154_tra-hat-sen-tra-dao-cam-sa-tra-oolong-nhan-hat-chia-lifestyle_980d4f82abf54075ad0ed74b83eeda15.jpg'),
+('https://product.hstatic.net/1000075078/product/tra-sen-nong_025153_e0a83d88df0346d68549447d3e0f5b1c_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1645970264_51427912-2275803252693688-2910246299053850624-n_6b0df40aba2a4954b2fd77a92b68f404.jpeg'),
+('https://product.hstatic.net/1000075078/product/tdcs-nong_288997_ad3077e0124e47998342b83c479babc4_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1686716517_kombucha-dao_26bdf38f20be4e479f7cbfc08363dd84_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1686716508_kombucha-yuzu_649d250b256b414e87ecbf4d1c2f8904_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1669736859_hi-tea-yuzu-tran-chau_01e546c1c34a4b74be36106c5339978e_large.png'),
+('https://product.hstatic.net/1000075078/product/1669736893_hi-tea-vai_7057577f3717414db7e0255646263516_large.png'),
+('https://product.hstatic.net/1000075078/product/1669737919_hi-tea-dao_7de7232b203241ca9acff1fcc8421ec4_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1719911220_oolongtuquy-suongsao_5378b3f8519342eda58d971183b4172e_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1697442154_ts-oolong-blao_8821f6623c3148afb57aabac458b7420_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1723623432_tra-sua-bo_ddd2d4f9f4764d9c91443212059fad6d_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1716811640_oolong-suong-sao_2ade534615234d3a9a25add757e5ec27_large.jpg'),
+('https://product.hstatic.net/1000075078/product/tra-den-matchiato_430281_bf2d5faa6f5d4bceb00cc0fc5a9b7546_large.jpg'),
+('https://product.hstatic.net/1000075078/product/hong-tra-sua-tran-chau_326977_b1af0629f2724302bd0acc18038eb9b1_large.jpg'),
+('https://product.hstatic.net/1000075078/product/hong-tra-sua-nong_941687_b41703499d9e412696aa8b3e0eb747c7_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1669736877_tra-sua-oolong-nuong-tran-chau_109a32e4fe1747d490d8f1c449821da7_large.png'),
+('https://product.hstatic.net/1000075078/product/oolong-nuong-nong_948581_4980ea35bc464c7381dcf00f788718ff_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1703471714_bg-vang-tra-xanh-espresso-marble_8b66b306026b44aaa6fd53f48bdf50c2_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1726647782_tra-xanh-sua-yen-mach_1c1d6c824b4c4da099fb33d5d8acf693_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1726647758_tra-xanh-latte-dam-vi_409739cf04aa43b38629e90bf5c11962_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1726647801_tra-xanh-latte-1_c7f6f877c6d54193b043c2c498586f1e_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1723623944_tra-xanh-yen-mach-nong_061821b45ea84386b12af43ebe8e41e1_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1697450393_tx-latte-nong_3be6c0f019314336918968d951e588f2_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1697450399_tx-duong-den_3342d63e65df4bd7a264ca681b9e30f1_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1697450407_tx-frosty_effb42ad21a54240b26ea1118c8d9d44_large.jpg'),
+('https://product.hstatic.net/1000075078/product/chocolatenong_949029_c8b336456daa4bb28bd076b54511fc72_large.jpg'),
+('https://product.hstatic.net/1000075078/product/chocolate-da_877186_0068f6ccbd694b4ea6684b0bd3c094df_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1697441914_phin-gato_304446dce9ec4fe0a5527536b93f6eda_large.png'),
+('https://product.hstatic.net/1000075078/product/1697441939_ca-phe-duong-den_684615fd8fce40c2a1f6a03e0555fe62_large.png'),
+('https://product.hstatic.net/1000075078/product/1697441933_caramel-arabica_64cd3e11a9904076b7a64e24d6d20f21_large.png'),
+('https://product.hstatic.net/1000075078/product/1697441945_banh-kem-dau_b1d03d84a9944d458f5948a3b7ce48f3_large.png'),
+('https://product.hstatic.net/1000075078/product/1697441952_choco-chip_06433e0e342b40d7bc59391be6df4c84_large.png'),
+('https://product.hstatic.net/1000075078/product/1669736956_banh-mi-que-pate_e282a96f5c8d4cd08ff6ec2be2b85ca4_large.png'),
+('https://product.hstatic.net/1000075078/product/banhmique_683851_dbcc3c6e485a444ca47fb0031561c73d_large.jpg'),
+('https://product.hstatic.net/1000075078/product/croissant-trung-muoi_880850_70befc0204cd41eda5cda089b9d6e3f0_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1701780462_butter-sua-dac_7e4e346df5094bfb9bdb3cdd4c01106e_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1669736993_cha-bong-pho-mai_e8e37b494c884d4cbf5d19e3f7c48362_large.png'),
+('https://product.hstatic.net/1000075078/product/1643102019_mochi-phucbontu_29336091f56b40ae8f848ee03b377ad0_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1643102034_mochi-vietquat_68b37206d69148f692a0502ecbe73517_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1655348107_mochi-choco_4e9e4807cb244f4faaddbcdfab9b03c7_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1655348113_mochi-traxanh_868992b76b3b4bb6bfcfc97bc78b5a22_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1638170137_tiramisu_6b75363ef97a4137a6cffcb0439e1791_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1638170066_gau_d66923bde3014e43ad93c86bcea11e7b_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1698736606_butter-croissant_d804d3c36f494fb09f0a59f1e35209ef_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1712139673_choco_a1c5545e2f0b41d0b001e8d57a0a60b7_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1698736662_pate-chaud_f71eaba4455842d4a97a06c943eb1dd6_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1697446642_ca-phe-den-da-tui_a178a9f2d9a84425b5c5397da639bf92_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1714646820_1697446954-ca-phe-den-da-hop-400x400_9a466f655d4d4ad99d09ad18baa93e91_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1714646385_1639648355-ca-phe-sua-da-hoa-tan-tui-25x22gr-400x400_46dfbb2921aa424c8de9f1b8ab5754b5_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1714646465_cpsd-3in1-971575-400x400-1_250d6f9c1ace432a8d739d43ea1031c5_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1714646758_1639648297-ca-phe-rang-xay-original-1-250gr-400x400_ea388fa07ab34525bd859a40ef3f34b8_large.jpg'),
+('https://product.hstatic.net/1000075078/product/1639648313_ca-phe-sua-da-hoa-tan-dam-vi-viet_cae2bfaf82ca499597e1b2f5b947b4b3_large.jpg');
+
+1 https://product.hstatic.net/1000075078/product/1703471714_bg-vang-tra-xanh-espresso-marble_8b66b306026b44aaa6fd53f48bdf50c2.jpg
+2 https://product.hstatic.net/1000075078/product/1729690140_bxl-yenmach_c6e8ccedcb87470998e570722d7e8f05.jpg
+3 https://product.hstatic.net/1000075078/product/1729690154_bxl-caramel_06cb698fe55f4df1ae05d0580f4caa14_large.jpg
+4 https://product.hstatic.net/1000075078/product/1729690191_bxl-hanhnhan_b00ecc78a8d742f7a19da0cc1a56a09b_large.jpg
+5 https://product.hstatic.net/1000075078/product/1723623452_bo-arabica_4c8eaae810de4602b29087d7faf0b1b0_large.jpg
+6 https://product.hstatic.net/1000075078/product/1686716532_dd-suada_c180c6187e644babbac7019a2070231e_large.jpg
+7 https://product.hstatic.net/1000075078/product/1675355354_bg-tch-sua-da-no_4fbf208885ed464ab4b5e145336d42a2_large.jpg
+8 https://product.hstatic.net/1000075078/product/1669736835_ca-phe-sua-da_e6168b6a38ec45d2b4854d2708b5d542_large.png
+8 https://product.hstatic.net/1000075078/product/1645963560_ca-phe-sua-da-min_b4921bbe3ce341c7a29c854fcd706713.png
+9 https://product.hstatic.net/1000075078/product/1639377770_cfsua-nong_9a47f58888e7444a9979e0d117d49ad3_large.jpg
+10 https://product.hstatic.net/1000075078/product/1639377904_bac-siu_525b9fa5055b41f183088c8e479a9472_large.jpg
+11 https://product.hstatic.net/1000075078/product/1639377926_bacsiunong_51fd4560c6b74a249176abc43f8f0ad6_large.jpg
+12 https://product.hstatic.net/1000075078/product/1639377797_ca-phe-den-da_6f4766ec0f8b4e929a8d916ae3c13254_large.jpg
+13 https://product.hstatic.net/1000075078/product/1639377816_ca-phe-den-nong_2e0cb9233846467fbdcb76e99d2b7cac_large.jpg
+14 https://product.hstatic.net/1000075078/product/1686716537_dd-latte_785591205184481597a2a79b9331e03b_large.jpg
+15 https://product.hstatic.net/1000075078/product/caramel-macchiato_143623_0e070a39d0e54e808db4d91049430b51_large.jpg
+15 https://product.hstatic.net/1000075078/product/1645971206_53476442-2294790520794961-6801279449942720512-n_b1176e22e0854cb98756db41bfbee1da.jpg
+15 https://product.hstatic.net/1000075078/product/1645971207_img-4933_581a3bec1d9846afaf9baca248613297.jpg
+16 https://product.hstatic.net/1000075078/product/caramelmacchiatonong_168039_9a4c155f15294771b9c300b0230c6a88_large.jpg
+16 https://product.hstatic.net/1000075078/product/1645969436_caramel-macchiato-nong-lifestyle-1_902039a227784df28b92879d9f0545b5.jpg
+17 https://product.hstatic.net/1000075078/product/latte-da_438410_ff2be8d76067434385f8e27b33fed780_large.jpg
+18 https://product.hstatic.net/1000075078/product/latte_851143_377d5e11c1e145a8bf5f82a64047e60d_large.jpg
+19 https://product.hstatic.net/1000075078/product/classic-cold-brew_791256_d4d8388a3d724f879845680c0239ff68_large.jpg
+20 https://product.hstatic.net/1000075078/product/1636647328_arme-nong_3c118e3822444aadb7f0e1a162d5264a_large.jpg
+20 https://product.hstatic.net/1000075078/product/1645968775_americano-copy_bb5a408f247646f0935eb17932a6d0d0.png
+20 https://product.hstatic.net/1000075078/product/1645968776_americano-nong-lifestyle_76ac71d068d84ba7a6dfd7732a45c560.jpg
+21 https://product.hstatic.net/1000075078/product/capu-da_487470_e06d3835cbc84e51bd635b04d541494e_large.jpg
+22 https://product.hstatic.net/1000075078/product/cappuccino_621532_f42ec557eda145b5958374ca67e65ff2_large.jpg
+23 https://product.hstatic.net/1000075078/product/cfdenda-espressoda_185438_1515261ef60b482eb58e1c545e7410a3_large.jpg
+24 https://product.hstatic.net/1000075078/product/espressonong_612688_41d0812d5efb47aaaebaea91a3b206db_large.jpg
+25 https://product.hstatic.net/1000075078/product/1716811739_cold-brew-kim-quat-2_accd458085414678b3f86996899fe92f_large.jpg
+26 https://product.hstatic.net/1000075078/product/cold-brew-sua-tuoi_379576_990956a1473e4ded82c8f76b877b7d15_large.jpg
+27 https://product.hstatic.net/1000075078/product/classic-cold-brew_239501_31d6bfe69bc04714a437cff0fe0317ab_large.jpg
+28 https://product.hstatic.net/1000075078/product/1719929441_bo-sua-pmt_77e27a929b5340e5bc7b83bb1963f0eb_large.jpg 
+29 https://product.hstatic.net/1000075078/product/1717387639_dau-pho-mai_de092bfb88614bf1bfe9bd9defc6522f_large.jpg
+30 https://product.hstatic.net/1000075078/product/1717387385_man-pho-mai_76b43ef7a40b497f94c1ee695b400754_large.jpg
+31 https://product.hstatic.net/1000075078/product/1717387907_man-cau-pho-mai_211483feb4e64f6a86bc23552155a3ce_large.jpg
+32 https://product.hstatic.net/1000075078/product/1717387602_nho-pho-mai_343a2e5a5bae4da59a7ba19953220f74_large.jpg
+33 https://product.hstatic.net/1000075078/product/1719200101_kimquat_54e42a7ed1de41cbaa9c967892e1587e_large.jpg
+34 https://product.hstatic.net/1000075078/product/1719200008_vai_4c62d00048e146a8ad8b8f0c321cf9f7_large.jpg
+35 https://product.hstatic.net/1000075078/product/1669736819_tra-dao-cam-sa-da_63defc32ce214da487850604a63ff281_large.png
+36 https://product.hstatic.net/1000075078/product/tra-sen_905594_88ead4453b3f4fdf963923d353941c87_large.jpg
+36 https://product.hstatic.net/1000075078/product/1645970154_img-2964_5ced6d93171c421dbbcd68cc8a17a6d7.jpg
+36 https://product.hstatic.net/1000075078/product/45970154_tra-hat-sen-tra-dao-cam-sa-tra-oolong-nhan-hat-chia-lifestyle_980d4f82abf54075ad0ed74b83eeda15.jpg
+37 https://product.hstatic.net/1000075078/product/tra-sen-nong_025153_e0a83d88df0346d68549447d3e0f5b1c_large.jpg
+37 https://product.hstatic.net/1000075078/product/1645970264_51427912-2275803252693688-2910246299053850624-n_6b0df40aba2a4954b2fd77a92b68f404.jpeg
+38 https://product.hstatic.net/1000075078/product/tdcs-nong_288997_ad3077e0124e47998342b83c479babc4_large.jpg
+39 https://product.hstatic.net/1000075078/product/1686716517_kombucha-dao_26bdf38f20be4e479f7cbfc08363dd84_large.jpg
+40 https://product.hstatic.net/1000075078/product/1686716508_kombucha-yuzu_649d250b256b414e87ecbf4d1c2f8904_large.jpg
+41 https://product.hstatic.net/1000075078/product/1669736859_hi-tea-yuzu-tran-chau_01e546c1c34a4b74be36106c5339978e_large.png
+42 https://product.hstatic.net/1000075078/product/1669736893_hi-tea-vai_7057577f3717414db7e0255646263516_large.png
+43 https://product.hstatic.net/1000075078/product/1669737919_hi-tea-dao_7de7232b203241ca9acff1fcc8421ec4_large.jpg
+44 https://product.hstatic.net/1000075078/product/1719911220_oolongtuquy-suongsao_5378b3f8519342eda58d971183b4172e_large.jpg
+45 https://product.hstatic.net/1000075078/product/1697442154_ts-oolong-blao_8821f6623c3148afb57aabac458b7420_large.jpg
+46 https://product.hstatic.net/1000075078/product/1723623432_tra-sua-bo_ddd2d4f9f4764d9c91443212059fad6d_large.jpg
+47 https://product.hstatic.net/1000075078/product/1716811640_oolong-suong-sao_2ade534615234d3a9a25add757e5ec27_large.jpg
+48 https://product.hstatic.net/1000075078/product/tra-den-matchiato_430281_bf2d5faa6f5d4bceb00cc0fc5a9b7546_large.jpg
+49 https://product.hstatic.net/1000075078/product/hong-tra-sua-tran-chau_326977_b1af0629f2724302bd0acc18038eb9b1_large.jpg
+50 https://product.hstatic.net/1000075078/product/hong-tra-sua-nong_941687_b41703499d9e412696aa8b3e0eb747c7_large.jpg
+51 https://product.hstatic.net/1000075078/product/1669736877_tra-sua-oolong-nuong-tran-chau_109a32e4fe1747d490d8f1c449821da7_large.png
+52 https://product.hstatic.net/1000075078/product/oolong-nuong-nong_948581_4980ea35bc464c7381dcf00f788718ff_large.jpg
+53 https://product.hstatic.net/1000075078/product/1703471714_bg-vang-tra-xanh-espresso-marble_8b66b306026b44aaa6fd53f48bdf50c2_large.jpg
+54 https://product.hstatic.net/1000075078/product/1726647782_tra-xanh-sua-yen-mach_1c1d6c824b4c4da099fb33d5d8acf693_large.jpg
+55 https://product.hstatic.net/1000075078/product/1726647758_tra-xanh-latte-dam-vi_409739cf04aa43b38629e90bf5c11962_large.jpg
+56 https://product.hstatic.net/1000075078/product/1726647801_tra-xanh-latte-1_c7f6f877c6d54193b043c2c498586f1e_large.jpg
+57 https://product.hstatic.net/1000075078/product/1723623944_tra-xanh-yen-mach-nong_061821b45ea84386b12af43ebe8e41e1_large.jpg
+58 https://product.hstatic.net/1000075078/product/1697450393_tx-latte-nong_3be6c0f019314336918968d951e588f2_large.jpg
+59 https://product.hstatic.net/1000075078/product/1697450399_tx-duong-den_3342d63e65df4bd7a264ca681b9e30f1_large.jpg
+60 https://product.hstatic.net/1000075078/product/1697450407_tx-frosty_effb42ad21a54240b26ea1118c8d9d44_large.jpg
+61 https://product.hstatic.net/1000075078/product/chocolatenong_949029_c8b336456daa4bb28bd076b54511fc72_large.jpg
+62 https://product.hstatic.net/1000075078/product/chocolate-da_877186_0068f6ccbd694b4ea6684b0bd3c094df_large.jpg
+63 https://product.hstatic.net/1000075078/product/1697441914_phin-gato_304446dce9ec4fe0a5527536b93f6eda_large.png
+64 https://product.hstatic.net/1000075078/product/1697441939_ca-phe-duong-den_684615fd8fce40c2a1f6a03e0555fe62_large.png
+65 https://product.hstatic.net/1000075078/product/1697441933_caramel-arabica_64cd3e11a9904076b7a64e24d6d20f21_large.png
+66 https://product.hstatic.net/1000075078/product/1697441945_banh-kem-dau_b1d03d84a9944d458f5948a3b7ce48f3_large.png
+67 https://product.hstatic.net/1000075078/product/1697441952_choco-chip_06433e0e342b40d7bc59391be6df4c84_large.png
+68 https://product.hstatic.net/1000075078/product/1669736956_banh-mi-que-pate_e282a96f5c8d4cd08ff6ec2be2b85ca4_large.png
+69 https://product.hstatic.net/1000075078/product/banhmique_683851_dbcc3c6e485a444ca47fb0031561c73d_large.jpg
+70 https://product.hstatic.net/1000075078/product/croissant-trung-muoi_880850_70befc0204cd41eda5cda089b9d6e3f0_large.jpg
+71 https://product.hstatic.net/1000075078/product/1701780462_butter-sua-dac_7e4e346df5094bfb9bdb3cdd4c01106e_large.jpg
+72 https://product.hstatic.net/1000075078/product/1669736993_cha-bong-pho-mai_e8e37b494c884d4cbf5d19e3f7c48362_large.png
+73 https://product.hstatic.net/1000075078/product/1643102019_mochi-phucbontu_29336091f56b40ae8f848ee03b377ad0_large.jpg
+74 https://product.hstatic.net/1000075078/product/1643102034_mochi-vietquat_68b37206d69148f692a0502ecbe73517_large.jpg
+75 https://product.hstatic.net/1000075078/product/1655348107_mochi-choco_4e9e4807cb244f4faaddbcdfab9b03c7_large.jpg
+76 https://product.hstatic.net/1000075078/product/1655348113_mochi-traxanh_868992b76b3b4bb6bfcfc97bc78b5a22_large.jpg
+77 https://product.hstatic.net/1000075078/product/1638170137_tiramisu_6b75363ef97a4137a6cffcb0439e1791_large.jpg
+78 https://product.hstatic.net/1000075078/product/1638170066_gau_d66923bde3014e43ad93c86bcea11e7b_large.jpg
+79 https://product.hstatic.net/1000075078/product/1698736606_butter-croissant_d804d3c36f494fb09f0a59f1e35209ef_large.jpg
+80 https://product.hstatic.net/1000075078/product/1712139673_choco_a1c5545e2f0b41d0b001e8d57a0a60b7_large.jpg
+81 https://product.hstatic.net/1000075078/product/1698736662_pate-chaud_f71eaba4455842d4a97a06c943eb1dd6_large.jpg
+82 https://product.hstatic.net/1000075078/product/1697446642_ca-phe-den-da-tui_a178a9f2d9a84425b5c5397da639bf92_large.jpg
+83 https://product.hstatic.net/1000075078/product/1714646820_1697446954-ca-phe-den-da-hop-400x400_9a466f655d4d4ad99d09ad18baa93e91_large.jpg
+84 https://product.hstatic.net/1000075078/product/1714646385_1639648355-ca-phe-sua-da-hoa-tan-tui-25x22gr-400x400_46dfbb2921aa424c8de9f1b8ab5754b5_large.jpg
+85 https://product.hstatic.net/1000075078/product/1714646465_cpsd-3in1-971575-400x400-1_250d6f9c1ace432a8d739d43ea1031c5_large.jpg
+86 https://product.hstatic.net/1000075078/product/1714646758_1639648297-ca-phe-rang-xay-original-1-250gr-400x400_ea388fa07ab34525bd859a40ef3f34b8_large.jpg
+87 https://product.hstatic.net/1000075078/product/1639648313_ca-phe-sua-da-hoa-tan-dam-vi-viet_cae2bfaf82ca499597e1b2f5b947b4b3_large.jpg
+
+(1,	1),
+(2,	2),
+(3,	3),
+(4,	4),
+(5,	5),
+(6,	6),
+(7,	7),
+(8,	8),
+(8,	9),
+(9,	10),
+(10,	11),
+(11,	12),
+(12,	13),
+(13,	14),
+(14,	15),
+(15,	16),
+(15,	17),
+(15,	18),
+(16,	19),
+(16,	20),
+(17,	21),
+(18,	22),
+(19,	23),
+(20,	24),
+(20,	25),
+(20,	26),
+(21,	27),
+(22,	28),
+(23,	29),
+(24,	30),
+(25,	31),
+(26,	32),
+(27,	33),
+(28,	34),
+(29,	35),
+(30,	36),
+(31,	37),
+(32,	38),
+(33,	39),
+(34,	40),
+(35,	41),
+(36,	42),
+(36,	43),
+(36,	44),
+(37,	45),
+(37,	46),
+(38,	47),
+(39,	48),
+(40,	49),
+(41,	50),
+(42,	51),
+(43,	52),
+(44,	53),
+(45,	54),
+(46,	55),
+(47,	56),
+(48,	57),
+(49,	58),
+(50,	59),
+(51,	60),
+(52,	61),
+(53,	62),
+(54,	63),
+(55,	64),
+(56,	65),
+(57,	66),
+(58,	67),
+(59,	68),
+(60,	69),
+(61,	70),
+(62,	71),
+(63,	72),
+(64,	73),
+(65,	74),
+(66,	75),
+(67,	76),
+(68,	77),
+(69,	78),
+(70,	79),
+(71,	80),
+(72,	81),
+(73,	82),
+(74,	83),
+(75,	84),
+(76,	85),
+(77,	86),
+(78,	87),
+(79,	88),
+(80,	89),
+(81,	90),
+(82,	91),
+(83,	92),
+(84,	93),
+(85,	94),
+(86,	95),
+(87,	96),
