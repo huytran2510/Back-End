@@ -2,6 +2,8 @@ package com.example.backendproject.repository;
 
 import com.example.backendproject.domain.dto.forlist.ProductDTO;
 import com.example.backendproject.domain.model.Product;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -24,6 +26,13 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
             "LEFT JOIN p.productImages pi " +
             "GROUP BY p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.categoryName")
     List<ProductDTO> findAllProducts();
+
+    @Query("SELECT new com.example.backendproject.domain.dto.forlist.ProductDTO(" +
+            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, MIN(pi.imageUrl)) " +
+            "FROM Product p " +
+            "LEFT JOIN p.productImages pi " +
+            "GROUP BY p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.categoryName")
+    Page<ProductDTO> findAllProducts(Pageable pageable);
 
 
     @Query("SELECT p FROM Product p " +

@@ -8,6 +8,8 @@ import com.example.backendproject.repository.ProductImagesRepository;
 import com.example.backendproject.repository.ProductRepository;
 import com.example.backendproject.service.templates.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
@@ -32,6 +34,17 @@ public class ProductServiceImpl implements IProductService {
     @Override
     public List<ProductDTO> getAllProducts() {
         return productRepository.findAllProducts();
+    }
+
+    @Override
+    public Page<ProductDTO> getAllProductsPage(int page, int size) {
+        return productRepository.findAllProducts(PageRequest.of(page, size));
+    }
+
+
+
+    public long getTotalProducts() {
+        return productRepository.count(); // Lấy tổng số sản phẩm
     }
 
     @Override
@@ -65,5 +78,35 @@ public class ProductServiceImpl implements IProductService {
                 product.getDescription(),
                 urlImages
         );
+    }
+
+    // Lấy thông tin sản phẩm theo ID
+    public Optional<Product> getProductById(Long id) {
+        return productRepository.findById(id);
+    }
+
+    // Thêm sản phẩm mới
+    public Product createProduct(Product product) {
+        return productRepository.save(product);
+    }
+
+    // Cập nhật sản phẩm
+    public Optional<Product> updateProduct(Long id, Product updatedProduct) {
+        return productRepository.findById(id).map(existingProduct -> {
+            existingProduct.setProductName(updatedProduct.getProductName());
+            existingProduct.setUnitPrice(updatedProduct.getUnitPrice());
+            existingProduct.setUnitsInStock(updatedProduct.getUnitsInStock());
+            existingProduct.setDiscontinued(updatedProduct.getDiscontinued());
+            return productRepository.save(existingProduct);
+        });
+    }
+
+    // Xóa sản phẩm theo ID
+    public boolean deleteProduct(Long id) {
+        if (productRepository.existsById(id)) {
+            productRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 }

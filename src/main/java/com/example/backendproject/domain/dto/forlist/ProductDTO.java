@@ -19,7 +19,7 @@ public class ProductDTO {
     private Integer unitsInStock;
     private Boolean discontinued;
     private Long categoryId;
-    private String urlImage;  // Only one image URL now
+    private String urlImage;
     public ProductDTO(Long productId, String productName, Double unitPrice, Integer unitsInStock, Boolean discontinued, Long categoryId, String urlImage) {
         this.productId = productId;
         this.productName = productName;
