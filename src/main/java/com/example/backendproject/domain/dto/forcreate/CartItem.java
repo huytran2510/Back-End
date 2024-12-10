@@ -5,6 +5,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -16,6 +18,6 @@ public class CartItem {
     private double price;
     private String size;
     private String topping;
-    private String imgUrl;
+    private List<String> imgUrl;
     // Các getters và setters
 }

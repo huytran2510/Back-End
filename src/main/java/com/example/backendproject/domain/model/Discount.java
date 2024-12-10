@@ -1,5 +1,7 @@
 package com.example.backendproject.domain.model;
 
+import com.example.backendproject.domain.model.enums.DiscountType;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -19,11 +21,21 @@ public class Discount {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long discountId;
 
-    @ManyToMany
+    @ManyToMany(fetch = FetchType.LAZY)
+    @JsonIgnore
     private Set<Product> products;
+
+    @Column(unique = true, nullable = false)
+    private String couponCode; // Mã khuyến mãi
 
     private String discountDescription;
     private Double discountPercent;
     private LocalDate startDate;
     private LocalDate endDate;
+
+    private Double minOrderAmount;
+
+    @Enumerated(EnumType.STRING)
+    private DiscountType discountType;
+
 }
