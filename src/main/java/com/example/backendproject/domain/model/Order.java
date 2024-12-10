@@ -1,6 +1,7 @@
 package com.example.backendproject.domain.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,10 +24,12 @@ public class Order {
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
+    @JsonIgnore
     private Customer customer;
 
     @ManyToOne
     @JoinColumn(name = "employee_id")
+    @JsonIgnore
     private User user;
 
     @Column(nullable = false)
@@ -48,13 +51,16 @@ public class Order {
     private double totalPayment;
 
     @OneToMany(mappedBy = "order")
+    @JsonIgnore
     private Set<OrderDetail> orderDetails;
 
     @OneToMany(mappedBy = "order")
+    @JsonIgnore
     private Set<Payment> payments;
 
     @ManyToOne
     @JoinColumn(name = "status_id")
+    @JsonIgnore
     private DeliveryStatus deliveryStatus;
 
     @Transient

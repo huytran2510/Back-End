@@ -12,6 +12,8 @@ import com.example.backendproject.service.templates.IEmailService;
 import com.example.backendproject.service.templates.IOrderDetailService;
 import com.example.backendproject.service.templates.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
@@ -74,6 +76,30 @@ public class OrderServiceImpl implements IOrderService {
         System.out.println(cOrder.getEmail());
         emailService.sendOrderConfirmationEmail(cOrder.getEmail(), order.getOrderId(), order.getShipName(), order.getShipPhone(), itemList);
         return order;
+    }
+
+    public Page<Order> getAllOrders(Pageable pageable) {
+        return orderRepository.findAll(pageable);
+    }
+
+    public Order updateOrder(String id, Order updatedOrder) {
+        Optional<Order> optionalOrder = orderRepository.findByOrderId(id);
+        if (optionalOrder.isPresent()) {
+            Order existingOrder = optionalOrder.get();
+            // Update fields
+            existingOrder.setOrderDate(updatedOrder.getOrderDate());
+            existingOrder.setRequiredDate(updatedOrder.getRequiredDate());
+            existingOrder.setShippedDate(updatedOrder.getShippedDate());
+            existingOrder.setShipName(updatedOrder.getShipName());
+            existingOrder.setShipAddress(updatedOrder.getShipAddress());
+            existingOrder.setShipPhone(updatedOrder.getShipPhone());
+            existingOrder.setEmail(updatedOrder.getEmail());
+            existingOrder.setTotalPayment(updatedOrder.getTotalPayment());
+            existingOrder.setDeliveryStatus(updatedOrder.getDeliveryStatus());
+            // Save updated order
+            return orderRepository.save(existingOrder);
+        }
+        return null;
     }
 
 }

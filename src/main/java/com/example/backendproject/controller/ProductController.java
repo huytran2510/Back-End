@@ -26,7 +26,7 @@ import java.io.IOException;
 import java.util.*;
 
 @RestController
-@RequestMapping("/products")
+@RequestMapping("/api/products")
 public class ProductController {
     @Autowired
     private IProductService productService;
