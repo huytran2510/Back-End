@@ -22,6 +22,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.Valid;
 import java.io.IOException;
 import java.util.*;
 
@@ -91,42 +92,37 @@ public class ProductController {
     // Thêm sản phẩm mới
     @PostMapping
     public ResponseEntity<Product> createProduct(
-            @RequestBody ProductDTO productDTO,  // Dữ liệu sản phẩm được gửi dưới dạng JSON
-            @RequestParam("images") MultipartFile[] imageFiles  // Các ảnh được gửi qua file
+            @RequestPart("productDTO") @Valid ProductDTO productDTO, // Nhận JSON của sản phẩm
+            @RequestParam("images") MultipartFile[] imageFiles // Nhận file ảnh
     ) {
-        // Kiểm tra nếu sản phẩm đã có ID (trong trường hợp gửi yêu cầu cập nhật thay vì tạo mới)
         if (productDTO.getProductId() != null) {
             return ResponseEntity.badRequest().body(null);
         }
 
-        // Tạo đối tượng Product từ ProductDTO
+        // Tạo đối tượng sản phẩm và xử lý file như trước
         Product product = new Product();
         product.setProductName(productDTO.getProductName());
         product.setUnitPrice(productDTO.getUnitPrice());
         product.setUnitsInStock(productDTO.getUnitsInStock());
         product.setDiscontinued(productDTO.getDiscontinued());
-//        product.setCategory((productDTO.getCategoryId()));
 
-        // Upload hình ảnh lên Firebase Storage
         Set<ProductImages> productImages = new HashSet<>();
         for (MultipartFile imageFile : imageFiles) {
             String imageUrl = uploadFileToFirebase(imageFile);
             if (imageUrl != null) {
                 ProductImages productImage = new ProductImages();
                 productImage.setImageUrl(imageUrl);
-                productImage.setProduct((Set<Product>) product);  // Gắn ảnh vào sản phẩm
+                productImage.setProduct((Set<Product>) product);
                 productImages.add(productImage);
             }
         }
 
-        // Gắn danh sách ảnh vào sản phẩm
         product.setProductImages(productImages);
-
-        // Lưu sản phẩm vào database
         Product createdProduct = productService.createProduct(product);
 
         return ResponseEntity.ok(createdProduct);
     }
+
 
 
 

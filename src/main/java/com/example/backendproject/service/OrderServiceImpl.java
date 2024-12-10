@@ -19,6 +19,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -43,9 +45,6 @@ public class OrderServiceImpl implements IOrderService {
     @Override
     public Order saveOrder(COrder cOrder, List<CartItem> itemList, Customer customer) {
         double totalPrice = 0;
-//        for(CartItem item : itemList) {
-//            totalPrice += (item.getPriceDiscount()*item.getQuantity());
-//        }
         Order order = new Order();
         order.setOrderId(cOrder.getOrderId());
         order.setOrderDate(LocalDate.now());
@@ -53,18 +52,10 @@ public class OrderServiceImpl implements IOrderService {
         order.setShipAddress(cOrder.getShipAddress());
         order.setShipName(cOrder.getFirstName() + "" + cOrder.getLastName());
         order.setShipPhone(cOrder.getShipPhone());
-        order.setShippedDate(cOrder.getShippedDate());
         order.setTotalPayment(totalPrice);
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        String username = authentication.getName();
-//        if (!username.equals("anonymousUser")) {
-//            Optional<Customer> customer = customerRepository.findByUsername(username);
-//            order.setCustomer(customer.get());
-//        }
+        order.setShippedDate(LocalDate.now());
+        order.setOrderId(createOrderId());
         order.setCustomer(customer);
-//        DeliveryStatus deliveryStatus = deliveryStatusRepository.findById(1L)
-//                .orElseThrow(() -> new IllegalArgumentException("Invalid status ID"));
-//        order.setDeliveryStatus(deliveryStatus);
 
         order.setEmail(cOrder.getEmail());
         // Save the entity to the database
@@ -100,6 +91,11 @@ public class OrderServiceImpl implements IOrderService {
             return orderRepository.save(existingOrder);
         }
         return null;
+    }
+    public String createOrderId() {
+        // Định dạng ngày giờ theo kiểu bạn muốn, ví dụ: "yyyyMMddHHmmss"
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+        return "ORDER" + LocalDateTime.now().format(formatter);
     }
 
 }

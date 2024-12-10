@@ -30,7 +30,6 @@ public class OrderController {
 
     @PostMapping("")
     public ResponseEntity<?> placeOrder(@RequestBody OrderRequest orderRequest, @AuthenticationPrincipal Customer customer) {
-        // Kiểm tra nếu giỏ hàng trống
         if (orderRequest.getCartItems().isEmpty()) {
             return ResponseEntity.badRequest().body("Giỏ hàng trống, vui lòng thêm sản phẩm.");
         }
