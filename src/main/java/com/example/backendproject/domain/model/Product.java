@@ -45,7 +45,12 @@ public class Product {
     @ManyToMany(mappedBy = "products",fetch = FetchType.LAZY)
     private Set<Discount> discountSet;
 
-    @ManyToMany(mappedBy = "product",fetch = FetchType.LAZY)
+    @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @JoinTable(
+            name = "product_images_product",
+            joinColumns = @JoinColumn(name = "product_product_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_images_image_id")
+    )
     private Set<ProductImages> productImages;
 
 

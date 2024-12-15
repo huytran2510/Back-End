@@ -16,9 +16,11 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.Arrays;
 
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
@@ -60,10 +62,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.authorizeHttpRequests()
                 .antMatchers("/api/auth/**", "/ws/**", "/chatroom/**",
                         "/private-message/**","/messsage","/chatroom/public",
-                        "/products/**", "/api/reviews/**","/api/payment/**","/api/place-order/**",
-                        "/api/discount/**").permitAll()
+                        "/api/products/**", "/api/reviews/**","/api/payment/**","/api/place-order/**",
+                        "/api/discount/**","/api/category/**","/api/reports/**",
+                        "/api/users/**").permitAll()
 
                 .anyRequest().authenticated();
+
+        http.cors().configurationSource(request -> {
+            CorsConfiguration cors = new CorsConfiguration();
+            cors.setAllowedOrigins(Arrays.asList("http://localhost:3000")); // or "*"
+            cors.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+            cors.setAllowedHeaders(Arrays.asList("Authorization", "Content-Type"));
+            return cors;
+        });
 
         http.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
     }

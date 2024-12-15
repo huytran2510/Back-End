@@ -21,14 +21,14 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Product findProductByProductId(Long id);
 
     @Query("SELECT new com.example.backendproject.domain.dto.forlist.ProductDTO(" +
-            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, MIN(pi.imageUrl)) " +
+            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, p.description, MIN(pi.imageUrl)) " +
             "FROM Product p " +
             "LEFT JOIN p.productImages pi " +
             "GROUP BY p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.categoryName")
     List<ProductDTO> findAllProducts();
 
     @Query("SELECT new com.example.backendproject.domain.dto.forlist.ProductDTO(" +
-            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, MIN(pi.imageUrl)) " +
+            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, p.description, MIN(pi.imageUrl)) " +
             "FROM Product p " +
             "LEFT JOIN p.productImages pi " +
             "GROUP BY p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.categoryName")
@@ -42,7 +42,7 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
     Optional<Product> findByIdWithCategoryAndImages(@Param("id") Long id);
 
     @Query("SELECT new com.example.backendproject.domain.dto.forlist.ProductDTO(" +
-            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, MIN(pi.imageUrl)) " +
+            "p.productId, p.productName, p.unitPrice, p.unitsInStock, p.discontinued, p.category.id, p.description, MIN(pi.imageUrl)) " +
             "FROM Product p " +
             "LEFT JOIN p.productImages pi " +
             "WHERE p.category.id= :id " +

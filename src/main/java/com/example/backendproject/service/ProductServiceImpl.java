@@ -24,13 +24,6 @@ public class ProductServiceImpl implements IProductService {
 
     @Autowired
     private ProductImagesRepository productImagesRepository;
-//    public List<ProductDTO> getAllProducts() {
-//        return productRepository.findAllProducts();
-//    }
-
-//    @Override
-//    public Product findById(Long id) { return productRepository.findProductByProductId(id);}
-
     @Override
     public List<ProductDTO> getAllProducts() {
         return productRepository.findAllProducts();

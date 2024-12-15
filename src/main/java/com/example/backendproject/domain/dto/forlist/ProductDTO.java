@@ -17,10 +17,11 @@ public class ProductDTO {
     private String productName;
     private Double unitPrice;
     private Integer unitsInStock;
+    private String description;
     private Boolean discontinued;
     private Long categoryId;
     private String urlImage;
-    public ProductDTO(Long productId, String productName, Double unitPrice, Integer unitsInStock, Boolean discontinued, Long categoryId, String urlImage) {
+    public ProductDTO(Long productId, String productName, Double unitPrice, Integer unitsInStock, Boolean discontinued, Long categoryId, String description, String urlImage) {
         this.productId = productId;
         this.productName = productName;
         this.unitPrice = unitPrice;
@@ -28,5 +29,6 @@ public class ProductDTO {
         this.discontinued = discontinued;
         this.categoryId = categoryId;
         this.urlImage = urlImage;
+        this.description = description;
     }
 }

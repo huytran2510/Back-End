@@ -10,6 +10,6 @@ import java.util.List;
 
 @Repository
 public interface ProductImagesRepository  extends JpaRepository<ProductImages, Long> {
-    @Query("SELECT DISTINCT pi.imageUrl FROM ProductImages pi JOIN pi.product p WHERE p.productId = :productId")
+    @Query("SELECT DISTINCT pi.imageUrl FROM ProductImages pi JOIN pi.products p WHERE p.productId = :productId")
     List<String> findDistinctImageUrlsByProductId(@Param("productId") Long productId);
 }

@@ -1,16 +1,20 @@
 package com.example.backendproject.service;
 
 import com.example.backendproject.domain.dto.forcreate.CartItem;
+import com.example.backendproject.domain.dto.forlist.DiscountDTO;
 import com.example.backendproject.domain.dto.response.DiscountValidationResult;
 import com.example.backendproject.domain.model.Discount;
 import com.example.backendproject.domain.model.enums.DiscountType;
 import com.example.backendproject.repository.DiscountRepository;
 import com.example.backendproject.service.templates.IDiscountService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DiscountServiceImpl implements IDiscountService {
@@ -64,5 +68,39 @@ public class DiscountServiceImpl implements IDiscountService {
 
     public List<Discount> getAllCoupons() {
         return discountRepository.findAll(); // Đây là cách gọi của JPA repository, bạn có thể tuỳ chỉnh theo yêu cầu
+    }
+
+    public Page<DiscountDTO> getAllDiscount(int page, int size) {
+        return discountRepository.findAllDiscount(PageRequest.of(page, size));
+    }
+
+    public long getTotalDiscounts() {
+        return discountRepository.count(); // Lấy tổng số sản phẩm
+    }
+
+
+    public Optional<Discount> getDiscountById(Long id) {
+        return discountRepository.findById(id);
+    }
+
+    public Discount createDiscount(Discount discount) {
+        return discountRepository.save(discount);
+    }
+
+    public Discount updateDiscount(Long id, Discount updatedDiscount) {
+        return discountRepository.findById(id).map(discount -> {
+            discount.setCouponCode(updatedDiscount.getCouponCode());
+            discount.setDiscountDescription(updatedDiscount.getDiscountDescription());
+            discount.setDiscountPercent(updatedDiscount.getDiscountPercent());
+            discount.setStartDate(updatedDiscount.getStartDate());
+            discount.setEndDate(updatedDiscount.getEndDate());
+            discount.setMinOrderAmount(updatedDiscount.getMinOrderAmount());
+            discount.setDiscountType(updatedDiscount.getDiscountType());
+            return discountRepository.save(discount);
+        }).orElseThrow(() -> new RuntimeException("Discount not found with id: " + id));
+    }
+
+    public void deleteDiscount(Long id) {
+        discountRepository.deleteById(id);
     }
 }

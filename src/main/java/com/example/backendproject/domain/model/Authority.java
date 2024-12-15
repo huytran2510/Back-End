@@ -21,7 +21,7 @@ public class Authority implements GrantedAuthority {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(unique = true)
+    @Column(unique = false)
     @Enumerated(EnumType.STRING)
     private ERole authority;
 
@@ -35,6 +35,12 @@ public class Authority implements GrantedAuthority {
 
     public Authority(ERole authority) {
         this.authority = authority;
+    }
+
+    public Authority(ERole authority, User user, Customer customer) {
+        this.authority = authority;
+        this.user = user;
+        this.customer = customer;
     }
 
     @Override
